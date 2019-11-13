@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"twitchycb182f3e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

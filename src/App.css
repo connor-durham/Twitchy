@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: white;
+}
+
+.twitchPlayer {
+  padding-left: 30px;
+}
+
+.twitchChat {
+  padding-left: 25px;
+  height: 100%;
+ 
+}
+
+.favoriteCardTitle {
+  margin-bottom: 0rem !important;
+  font-size: 1.4rem !important;
+
+}
+
+.favoriteCardText {
+  margin-bottom: .5rem !important;
+}
+
+.card-body {
+  padding:1.3rem !important;
+}
+
+.row {
+  overflow-x:scroll;
+}
+
+.favoriteCard {
+  margin-right: 15px;
+  margin: 10px;
+  height: 150px;
+  width: 15rem !important;
+
+    display: inline-block !important;
+}
+
+.mainBody {
+  width: auto;
+}
+
+.footer {
+  height: 100px;
+}
+
+.favoriteWrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+
+
+.hideButtonContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hideButton {
+  margin-left: '10px';
+  margin-right: '10px';
+  width: 100%;
+  margin-top:10px;
+  margin-bottom: 40px;
+  height: 60%;
+  padding: 5px !important;
+}
+
+.favoriteColumn {
+  overflow:scroll;
+  overflow-y:auto;
+  height:80%;
+}
+
