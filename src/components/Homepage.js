@@ -38,22 +38,25 @@ function Homepage() {
             }
         })
         favorites = response.data.favorites;
+        console.log(response.data)
         console.log(favorites)
         fetchData();
     };
 
 
     const deleteFavorite = (streamer) => {
-        console.log('the streamer', streamer);
+        // console.log('the streamer', streamer);
         axios.delete(`/deleteFavorite/${user}/${streamer}`).then((res) => {
-            console.log("poopy", res.data)
+            getUser()
         })
+
     }
 
     const fetchData = async () => {
         
         let baseURL = `https://api.twitch.tv/helix/streams?`
         let queryParams = ''
+        // console.log("PEEEEEEE", favorites)
         favorites.forEach(name => {
             queryParams += `user_login=${name}&`;
         })
@@ -63,11 +66,11 @@ function Homepage() {
 
         let finalURL = baseURL + queryParams
 
-        console.log(finalURL)
+        // console.log(finalURL)
 
         const result = await api.get(finalURL)
 
-        console.log(result.data.data)
+        // console.log(result.data.data)
 
         setChannels(result.data.data)
 
