@@ -64,7 +64,7 @@ function GameStreams({match, location}) {
                             watch {stream.user_name}'s channel
                         </a>
                         </button>
-                        <button className="btn btn-success p-3" style={{marginLeft: 25 + '%'}} onClick={() => handleFavorite(stream)}>
+                        <button className="btn btn-success p-3" style={{marginLeft: 20 + '%', marginTop: 2 + '%'}} onClick={() => handleFavorite(stream)}>
                             Favorite
                         </button>
                     </div>
