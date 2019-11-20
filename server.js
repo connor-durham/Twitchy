@@ -31,14 +31,14 @@ app.get('/user', function(req, res) {
 
 app.post('/favorite', (req, res) => {
 
-  console.log(req.body)
+  // console.log(req.body)
   
   let favorite = req.body.params.streams.user_name
   let user = req.body.params.username
 
   User.updateOne(
     { username: user},
-    { $push: { 
+    { $addToSet: { 
       favorites: favorite 
 
     }}

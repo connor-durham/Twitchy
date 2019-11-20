@@ -38,8 +38,6 @@ function Homepage() {
             }
         })
         favorites = response.data.favorites;
-        console.log(response.data)
-        console.log(favorites)
         fetchData();
     };
 
@@ -56,24 +54,25 @@ function Homepage() {
         
         let baseURL = `https://api.twitch.tv/helix/streams?`
         let queryParams = ''
-        // console.log("PEEEEEEE", favorites)
         favorites.forEach(name => {
             queryParams += `user_login=${name}&`;
         })
 
-    
-        setCurrentChannel(favorites[0])
-
         let finalURL = baseURL + queryParams
-
-        // console.log(finalURL)
 
         const result = await api.get(finalURL)
 
-        // console.log(result.data.data)
 
         setChannels(result.data.data)
 
+
+        if (result.data.data[0]) {
+            setCurrentChannel(result.data.data[0].user_name)
+        }
+        else {
+            setCurrentChannel("Monstercat")
+        }
+       
 
         
     }
