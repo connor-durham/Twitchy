@@ -73,7 +73,7 @@ function Streams() {
                         watch {channel.user_name}'s' stream
                     </a>
                     </button>
-                    <button className="btn btn-success p-3" style={{marginLeft: 12 + '%'}} onClick={() => handleFavorite(channel)}>
+                    <button className="btn btn-success p-3" style={{marginLeft: 12 + '%' ,marginTop: 2 + '%'}} onClick={() => handleFavorite(channel)}>
                        Add to Favorites
                     </button>
 
